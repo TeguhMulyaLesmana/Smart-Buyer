@@ -1,38 +1,166 @@
-.App {
+/* General Styles */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background: url("./assets/background.jpg") no-repeat center center fixed;
+  background-size: cover;
+}
+
+.app-container {
+  max-width: 1200px;
+  margin: 30px auto;
+  padding: 50px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 30px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Tambahkan bayangan untuk membedakan konten dari latar belakang */
+}
+
+/* Header Styles */
+.app-header {
+  background-color: #000000; /* Ubah warna header menjadi abu-abu gelap */
+  color: rgb(255, 255, 255);
   text-align: center;
+  padding: 30px;
+  margin-bottom: 30px;
+  border-radius: 20px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.app-logo {
+  height: 100px; /* Perbesar ukuran logo */
+  width: 100px; /* Perbesar ukuran logo */
+  border-radius: 50%;
+  margin-right: 10px;
+  vertical-align: middle;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Product Form Styles */
+.product-form {
+  background-color: white; /* Ubah warna latar belakang formulir menjadi putih */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center; /* Pusatkan konten di dalam formulir */
+}
+
+.product-form input {
+  padding: 10px;
+  font-size: 16px;
+  margin-bottom: 10px;
+  width: 100%;
+  max-width: 400px; /* Batasi lebar input */
+}
+
+.product-form button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007bff; /* Ubah warna tombol submit menjadi biru */
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: auto; /* Ubah lebar tombol menjadi otomatis */
+  margin-top: 10px; /* Tambahkan margin atas untuk tombol */
+}
+
+.product-form button:hover {
+  background-color: #0056b3; /* Ubah warna latar belakang tombol submit saat disorot */
+}
+
+/* Product List Styles */
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.product-item {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: calc(33.333% - 20px);
+  box-sizing: border-box;
+}
+
+.product-item h2 {
+  margin-top: 0;
+}
+
+.product-item button {
+  margin-top: 10px;
+  padding: 10px;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+}
+
+.product-item button:nth-child(1) {
+  background-color: #2196f3;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.product-item button:nth-child(1):hover {
+  background-color: #1976d2;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.product-item button:nth-child(2) {
+  background-color: #f44336;
+  color: white;
+}
+
+.product-item button:nth-child(2):hover {
+  background-color: #d32f2f;
+}
+
+/* Modal Styles */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 500px;
+  width: 100%;
+  text-align: center;
+}
+
+.modal-content button {
+  margin-top: 10px;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.modal-content button:nth-child(1) {
+  background-color: #4caf50;
+  color: white;
+}
+
+.modal-content button:nth-child(1):hover {
+  background-color: #45a049;
+}
+
+.modal-content button:nth-child(2) {
+  background-color: #f44336;
+  color: white;
+}
+
+.modal-content button:nth-child(2):hover {
+  background-color: #d32f2f;
 }
